@@ -4,7 +4,12 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@/components/Box";
 import { createXRStore, XR } from "@react-three/xr";
-import { Environment, OrbitControls } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  SoftShadows,
+  Sky,
+} from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
 
@@ -18,13 +23,13 @@ export const Scene: React.FC = () => {
       camera={{ position: [0, 0, 12], fov: 30 }}
     >
       <XR store={store}>
-        <hemisphereLight intensity={0.5} color="white" groundColor="black" />
+        <SoftShadows size={15} focus={5} samples={5} />
         <directionalLight
           castShadow
-          position={[5, 10, 5]}
-          intensity={1.0}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
+          position={[4, 10, 4]}
+          intensity={1.5}
+          shadow-mapSize-width={512}
+          shadow-mapSize-height={512}
         />
         <Suspense fallback={<EnvironmentFallback />}>
           <Environment
@@ -32,6 +37,8 @@ export const Scene: React.FC = () => {
             ground={{ height: 5, radius: 40, scale: 20 }}
           />
         </Suspense>
+
+        <Sky inclination={1.0} />
 
         <Box position={[-4.0, 1.5, 0]} castShadow />
         <Box
@@ -48,14 +55,14 @@ export const Scene: React.FC = () => {
           castShadow
         />
 
-        {/* 影を受けるための地面 */}
+        {/* 後にコンポーネント化 */}
         <mesh
           receiveShadow
           rotation={[-Math.PI / 2, 0, 0]}
           position={[0, 0, 0]}
         >
           <planeGeometry args={[100, 100]} />
-          <shadowMaterial opacity={0.6} />
+          <shadowMaterial transparent opacity={0.4} />
         </mesh>
 
         <OrbitControls
