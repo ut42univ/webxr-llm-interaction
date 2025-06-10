@@ -1,4 +1,5 @@
 import { Shadow } from "@react-three/drei";
+import { useState } from "react";
 
 interface SphereProps {
   size?: number;
@@ -12,16 +13,28 @@ export const Sphere: React.FC<SphereProps> = ({
   color = "white",
   hoverColor = "lightgray",
   ...props
-}) => (
-  <mesh {...props}>
-    <sphereGeometry args={[size, 64, 64]} />
-    <meshPhysicalMaterial roughness={0} color={color} envMapIntensity={0.2} />
-    <Shadow
-      rotation={[-Math.PI / 2, 0, 0]}
-      scale={size * 1.5}
-      position={[0, -size, 0]}
-      color="black"
-      opacity={1}
-    />
-  </mesh>
-);
+}) => {
+  const [hovered, setHover] = useState(false);
+
+  return (
+    <mesh
+      {...props}
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
+    >
+      <sphereGeometry args={[size, 64, 64]} />
+      <meshPhysicalMaterial
+        roughness={0}
+        color={hovered ? hoverColor : color}
+        envMapIntensity={0.2}
+      />
+      <Shadow
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={size * 1.5}
+        position={[0, -size, 0]}
+        color="black"
+        opacity={1}
+      />
+    </mesh>
+  );
+};
