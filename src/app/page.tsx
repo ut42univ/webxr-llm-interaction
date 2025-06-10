@@ -2,7 +2,7 @@
 
 import type { NextPage } from "next";
 import React from "react";
-import { Scene, store } from "@/components/Scene";
+import { Scene } from "@/components/Scene";
 
 const HomePage: NextPage = () => {
   return (
