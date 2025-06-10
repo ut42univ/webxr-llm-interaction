@@ -7,7 +7,6 @@ import { Scene, store } from "@/components/Scene";
 const HomePage: NextPage = () => {
   return (
     <div>
-      <button onClick={() => store.enterVR()} />
       <Scene />
     </div>
   );
