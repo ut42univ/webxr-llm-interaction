@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@/components/Box";
 import { createXRStore, XR } from "@react-three/xr";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
+import { EnvironmentFallback } from "@/components/EnvironmentFallback";
 
 export const store = createXRStore();
 
@@ -17,10 +18,12 @@ export const Scene: React.FC = () => {
     >
       <XR store={store}>
         <hemisphereLight intensity={0.5} color="white" groundColor="black" />
-        <Environment
-          files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/roof_garden_4k.hdr"
-          ground={{ height: 5, radius: 40, scale: 20 }}
-        />
+        <Suspense fallback={<EnvironmentFallback />}>
+          <Environment
+            files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/roof_garden_4k.hdr"
+            ground={{ height: 5, radius: 40, scale: 20 }}
+          />
+        </Suspense>
 
         <Box position={[-4.0, 1.5, 0]} />
         <Box position={[4.0, 1.5, 0]} color="blue" hoverColor="lightblue" />
