@@ -7,10 +7,10 @@ export const EnvironmentFallback: React.FC = () => {
     <Html fullscreen>
       <div className="w-full h-full flex flex-col justify-center items-center bg-white">
         <div className="grid grid-cols-2 gap-4 mb-6">
-          <Skeleton className="w-48 h-24" />
-          <Skeleton className="w-48 h-24" />
-          <Skeleton className="w-48 h-24" />
-          <Skeleton className="w-48 h-24" />
+          <Skeleton className="w-24 h-24" />
+          <Skeleton className="w-24 h-24" />
+          <Skeleton className="w-24 h-24" />
+          <Skeleton className="w-24 h-24" />
         </div>
         <p className="text-xl font-medium">環境を読み込んでいます...</p>
       </div>
