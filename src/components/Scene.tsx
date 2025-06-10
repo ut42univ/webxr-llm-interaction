@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Box } from "@/components/Box";
 import { createXRStore, XR } from "@react-three/xr";
 import { Environment, OrbitControls } from "@react-three/drei";
+import { Sphere } from "@/components/Sphere";
 
 export const store = createXRStore();
 
@@ -20,8 +21,18 @@ export const Scene: React.FC = () => {
           files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/roof_garden_8k.hdr"
           ground={{ height: 5, radius: 40, scale: 20 }}
         />
-        <Box position={[-1.2, 1.5, 0]} />
-        <Box position={[1.2, 1.5, 0]} color="blue" hoverColor="lightblue" />
+
+        <Box position={[-4.0, 1.5, 0]} />
+        <Box position={[4.0, 1.5, 0]} color="blue" hoverColor="lightblue" />
+
+        <Sphere
+          position={[0, 1.5, 0]}
+          size={1.5}
+          amount={50}
+          color="orange"
+          emissive="orange"
+        />
+
         <OrbitControls
           autoRotateSpeed={0.85}
           zoomSpeed={0.75}
