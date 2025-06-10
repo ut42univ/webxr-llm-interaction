@@ -2,16 +2,15 @@ import { Shadow } from "@react-three/drei";
 
 interface SphereProps {
   size?: number;
-  amount?: number;
   color?: string;
-  emissive?: string;
+  hoverColor?: string;
   [key: string]: any;
 }
 
 export const Sphere: React.FC<SphereProps> = ({
   size = 1,
-  amount = 50,
   color = "white",
+  hoverColor = "lightgray",
   ...props
 }) => (
   <mesh {...props}>
