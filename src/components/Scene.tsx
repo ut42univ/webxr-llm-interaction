@@ -25,13 +25,7 @@ export const Scene: React.FC = () => {
         <Box position={[-4.0, 1.5, 0]} />
         <Box position={[4.0, 1.5, 0]} color="blue" hoverColor="lightblue" />
 
-        <Sphere
-          position={[0, 1.5, 0]}
-          size={1.5}
-          amount={50}
-          color="orange"
-          emissive="orange"
-        />
+        <Sphere position={[0, 1.0, 0]} color="orange" />
 
         <OrbitControls
           autoRotateSpeed={0.85}
