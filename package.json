@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pmndrs/assets": "^1.7.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-spring/three": "^10.0.1",
     "@react-three/drei": "^10.1.2",

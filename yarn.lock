@@ -351,6 +351,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.3.3.tgz#c0e33e069d7922dd0546cac77a0247ad81d4a1aa"
   integrity sha512-4QZG6F8enl9/S2+yIiOiju0iCTFd93d8VC1q9LZS4p/Xuk81W2QDjCFeoogmrWWkAD59z8ZxepBQap2dKS5ruw==
 
+"@pmndrs/assets@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@pmndrs/assets/-/assets-1.7.0.tgz#46e14926f6a40b44ac44bde8140b423148b9221f"
+  integrity sha512-zHmKNS+3Jvu9K3zJBQfYQKT9Pn9IQt8s0q/eJC3CXKpWpyg6IBa+ivN9NgDn+fDT2AVjUh2YRZ//GXUueuAdCg==
+
 "@pmndrs/handle@^6.5.5":
   version "6.6.17"
   resolved "https://registry.yarnpkg.com/@pmndrs/handle/-/handle-6.6.17.tgz#30f81db6058040cb0286be860ec4e21e13aa0352"
