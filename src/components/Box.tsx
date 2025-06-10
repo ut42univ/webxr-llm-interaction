@@ -5,15 +5,17 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 
 interface BoxProps {
-  position?: [number, number, number];
+  size?: number;
   color?: string;
   hoverColor?: string;
+  [key: string]: any;
 }
 
 export const Box: React.FC<BoxProps> = ({
-  position = [0, 0, 0],
+  size = 1,
   color = "red",
   hoverColor = "hotpink",
+  ...props
 }) => {
   const meshRef = useRef<THREE.Mesh>(null!);
   const [hovered, setHover] = useState(false);
@@ -27,15 +29,19 @@ export const Box: React.FC<BoxProps> = ({
 
   return (
     <mesh
+      {...props}
       ref={meshRef}
-      position={position}
-      scale={active ? 1.5 : 1}
+      scale={active ? size * 1.5 : size}
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? hoverColor : color} />
+      <boxGeometry args={[size, size, size]} />
+      <meshPhysicalMaterial
+        roughness={0}
+        color={hovered ? hoverColor : color}
+        envMapIntensity={0.2}
+      />
     </mesh>
   );
 };
