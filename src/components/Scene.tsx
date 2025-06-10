@@ -18,7 +18,7 @@ export const Scene: React.FC = () => {
       <XR store={store}>
         <hemisphereLight intensity={0.5} color="white" groundColor="black" />
         <Environment
-          files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/roof_garden_8k.hdr"
+          files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/roof_garden_4k.hdr"
           ground={{ height: 5, radius: 40, scale: 20 }}
         />
 
