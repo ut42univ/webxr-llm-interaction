@@ -12,6 +12,7 @@ import {
 } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
+import { Floor } from "@/components/Floor";
 
 export const store = createXRStore();
 
@@ -55,15 +56,7 @@ export const Scene: React.FC = () => {
           castShadow
         />
 
-        {/* 後にコンポーネント化 */}
-        <mesh
-          receiveShadow
-          rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, 0, 0]}
-        >
-          <planeGeometry args={[100, 100]} />
-          <shadowMaterial transparent opacity={0.4} />
-        </mesh>
+        <Floor />
 
         <OrbitControls
           autoRotateSpeed={0.85}
