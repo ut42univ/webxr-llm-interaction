@@ -9,6 +9,7 @@ import {
   OrbitControls,
   SoftShadows,
   Sky,
+  Stats,
 } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
@@ -24,6 +25,7 @@ export const Scene: React.FC = () => {
       camera={{ position: [0, 0, 12], fov: 30 }}
     >
       <XR store={store}>
+        <Stats />
         <SoftShadows size={15} focus={5} samples={5} />
         <directionalLight
           castShadow
