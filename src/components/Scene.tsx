@@ -10,6 +10,7 @@ import {
   SoftShadows,
   Sky,
   Stats,
+  PerspectiveCamera,
 } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
@@ -19,13 +20,16 @@ export const store = createXRStore();
 
 export const Scene: React.FC = () => {
   return (
-    <Canvas
-      shadows
-      className="!fixed !w-screen !h-screen"
-      camera={{ position: [0, 0, 12], fov: 30 }}
-    >
+    <Canvas shadows className="!fixed !w-screen !h-screen">
       <XR store={store}>
         <Stats />
+        <PerspectiveCamera makeDefault position={[0, 0, 12]} fov={30} />
+        <OrbitControls
+          autoRotateSpeed={0.85}
+          zoomSpeed={0.75}
+          minPolarAngle={Math.PI / 2.5}
+          maxPolarAngle={Math.PI / 2.55}
+        />
         <SoftShadows size={15} focus={5} samples={5} />
         <directionalLight
           castShadow
@@ -40,8 +44,8 @@ export const Scene: React.FC = () => {
             ground={{ height: 5, radius: 40, scale: 20 }}
           />
         </Suspense>
-
         <Sky inclination={1.0} />
+        <Floor />
 
         <Box position={[-4.0, 1.5, 0]} castShadow />
         <Box
@@ -56,15 +60,6 @@ export const Scene: React.FC = () => {
           color="orange"
           hoverColor="yellow"
           castShadow
-        />
-
-        <Floor />
-
-        <OrbitControls
-          autoRotateSpeed={0.85}
-          zoomSpeed={0.75}
-          minPolarAngle={Math.PI / 2.5}
-          maxPolarAngle={Math.PI / 2.55}
         />
       </XR>
     </Canvas>
