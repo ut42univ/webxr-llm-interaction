@@ -11,10 +11,12 @@ import {
   Sky,
   Stats,
   PerspectiveCamera,
+  Torus,
 } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
 import { Floor } from "@/components/Floor";
+import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier";
 
 export const store = createXRStore();
 
@@ -61,6 +63,18 @@ export const Scene: React.FC = () => {
           hoverColor="yellow"
           castShadow
         />
+
+        {/* 物理法則テスト*/}
+        <Suspense>
+          <Physics>
+            <RigidBody colliders={"hull"} restitution={1}>
+              <Sphere position={[0, 2, -5]} color="olive" castShadow />
+            </RigidBody>
+
+            {/* 地面のコライダー */}
+            <CuboidCollider position={[0, 0, 0]} args={[20, 0, 20]} />
+          </Physics>
+        </Suspense>
       </XR>
     </Canvas>
   );
