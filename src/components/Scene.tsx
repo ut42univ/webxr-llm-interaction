@@ -20,7 +20,7 @@ export const Scene: React.FC = () => {
   return (
     <Canvas
       shadows
-      className="!w-screen !h-screen"
+      className="!fixed !w-screen !h-screen"
       camera={{ position: [0, 0, 12], fov: 30 }}
     >
       <XR store={store}>
