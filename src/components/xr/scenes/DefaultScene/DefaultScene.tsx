@@ -10,8 +10,8 @@ import { store } from "@/lib/xr-store";
 import { Lights } from "@/components/xr/common/Lights";
 import { Camera } from "@/components/xr/common/Camera";
 import { EnvironmentSetup } from "@/components/xr/scenes/DefaultScene/EnvironmentSetup";
-import { PhysicsWorld } from "./PhysicsWorld";
-import { InteractiveObjects } from "./InteractiveObjects";
+import { InteractiveObjects } from "@/components/xr/scenes/DefaultScene/InteractiveObjects";
+import { PhysicsWorld } from "@/components/xr/scenes/DefaultScene/PhysicsWorld";
 
 export const DefaultScene: React.FC = () => {
   const [position, setPosition] = useState(new Vector3());
