@@ -2,7 +2,7 @@
 
 import type { NextPage } from "next";
 import React from "react";
-import { Scene, store } from "@/components/Scene";
+import { Scene, store } from "@/components/xr/Scene";
 import { Button } from "@/components/ui/button";
 import { RectangleGoggles } from "lucide-react";
 

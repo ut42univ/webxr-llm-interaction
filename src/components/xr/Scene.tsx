@@ -2,7 +2,7 @@
 
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Box } from "@/components/Box";
+import { Box } from "@/components/xr/Box";
 import { createXRStore, TeleportTarget, XR, XROrigin } from "@react-three/xr";
 import {
   Environment,
@@ -12,9 +12,9 @@ import {
   Stats,
   PerspectiveCamera,
 } from "@react-three/drei";
-import { Sphere } from "@/components/Sphere";
-import { EnvironmentFallback } from "@/components/EnvironmentFallback";
-import { Floor } from "@/components/Floor";
+import { Sphere } from "@/components/xr/Sphere";
+import { EnvironmentFallback } from "@/components/xr/EnvironmentFallback";
+import { Floor } from "@/components/xr/Floor";
 import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier";
 import { Vector3 } from "three";
 
