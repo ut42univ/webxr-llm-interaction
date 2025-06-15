@@ -361,7 +361,7 @@
   resolved "https://registry.yarnpkg.com/@pmndrs/assets/-/assets-1.7.0.tgz#46e14926f6a40b44ac44bde8140b423148b9221f"
   integrity sha512-zHmKNS+3Jvu9K3zJBQfYQKT9Pn9IQt8s0q/eJC3CXKpWpyg6IBa+ivN9NgDn+fDT2AVjUh2YRZ//GXUueuAdCg==
 
-"@pmndrs/handle@^6.5.5":
+"@pmndrs/handle@^6.5.5", "@pmndrs/handle@~6.6.17":
   version "6.6.17"
   resolved "https://registry.yarnpkg.com/@pmndrs/handle/-/handle-6.6.17.tgz#30f81db6058040cb0286be860ec4e21e13aa0352"
   integrity sha512-n3DBqfq+F6Uyzm74HQH2T+RyFu/UozI+gXwJfhMyg8bxvdppHyiHHHNnMP01p6JZrXthGDubhtlFsDzkIxMX2A==
@@ -487,6 +487,15 @@
     suspend-react "^0.1.3"
     use-sync-external-store "^1.4.0"
     zustand "^5.0.3"
+
+"@react-three/handle@^6.6.17":
+  version "6.6.17"
+  resolved "https://registry.yarnpkg.com/@react-three/handle/-/handle-6.6.17.tgz#18a40031bbcf239717f557b3c775d87c96a5355b"
+  integrity sha512-GlsN+OYwoO6rzhcYdNeVsfevBgEEXjTMQUeFm3M0AMEeZvPzp8NpZYRF+0dpoTqS0bYg3Zpq53io5BSdinK5FA==
+  dependencies:
+    "@pmndrs/handle" "~6.6.17"
+    "@pmndrs/pointer-events" "~6.6.17"
+    zustand "^4.5.2"
 
 "@react-three/rapier@^2.1.0":
   version "2.1.0"
