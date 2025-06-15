@@ -11,7 +11,6 @@ import {
   Sky,
   Stats,
   PerspectiveCamera,
-  Torus,
 } from "@react-three/drei";
 import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
@@ -53,6 +52,7 @@ export const Scene: React.FC = () => {
             ground={{ height: 5, radius: 40, scale: 20 }}
           />
         </Suspense>
+
         <Sky inclination={1.0} />
         <TeleportTarget onTeleport={setPosition}>
           <Floor />
