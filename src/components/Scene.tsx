@@ -1,9 +1,9 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@/components/Box";
-import { createXRStore, XR } from "@react-three/xr";
+import { createXRStore, TeleportTarget, XR, XROrigin } from "@react-three/xr";
 import {
   Environment,
   OrbitControls,
@@ -17,13 +17,20 @@ import { Sphere } from "@/components/Sphere";
 import { EnvironmentFallback } from "@/components/EnvironmentFallback";
 import { Floor } from "@/components/Floor";
 import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier";
+import { Vector3 } from "three";
 
-export const store = createXRStore();
+export const store = createXRStore({
+  hand: { teleportPointer: true },
+  controller: { teleportPointer: true },
+});
 
 export const Scene: React.FC = () => {
+  const [position, setPosition] = useState(new Vector3());
+
   return (
     <Canvas shadows className="!fixed !w-screen !h-screen">
       <XR store={store}>
+        <XROrigin position={position} />
         <Stats />
         <PerspectiveCamera makeDefault position={[0, 0, 12]} fov={30} />
         <OrbitControls
@@ -47,7 +54,9 @@ export const Scene: React.FC = () => {
           />
         </Suspense>
         <Sky inclination={1.0} />
-        <Floor />
+        <TeleportTarget onTeleport={setPosition}>
+          <Floor />
+        </TeleportTarget>
 
         <Box position={[-4.0, 1.5, 0]} castShadow />
         <Box
