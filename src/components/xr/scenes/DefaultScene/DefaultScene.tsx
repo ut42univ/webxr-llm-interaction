@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { TeleportTarget, XR, XROrigin } from "@react-three/xr";
-import { Stats } from "@react-three/drei";
+import { GizmoHelper, GizmoViewport, Stats } from "@react-three/drei";
 import { Floor } from "@/components/xr/common/Floor";
 import { Vector3 } from "three";
 import { store } from "@/lib/xr-store";
@@ -15,12 +15,21 @@ import { PhysicsWorld } from "@/components/xr/scenes/DefaultScene/PhysicsWorld";
 
 export const DefaultScene: React.FC = () => {
   const [position, setPosition] = useState(new Vector3());
+  position.set(0, 0, 0);
 
   return (
     <Canvas shadows className="!fixed !w-screen !h-screen">
       <XR store={store}>
         <XROrigin position={position} />
+
         <Stats />
+        <GizmoHelper alignment="top-right" margin={[80, 80]}>
+          <GizmoViewport
+            axisColors={["red", "green", "blue"]}
+            labelColor="white"
+          />
+        </GizmoHelper>
+
         <Camera />
         <Lights />
         <EnvironmentSetup />
