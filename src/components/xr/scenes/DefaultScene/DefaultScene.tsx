@@ -9,7 +9,7 @@ import { Vector3 } from "three";
 import { store } from "@/lib/xr-store";
 import { Lights } from "@/components/xr/common/Lights";
 import { Camera } from "@/components/xr/common/Camera";
-import { EnvironmentSetup } from "@/components/xr/common/EnvironmentSetup";
+import { EnvironmentSetup } from "@/components/xr/scenes/DefaultScene/EnvironmentSetup";
 import { PhysicsWorld } from "./PhysicsWorld";
 import { InteractiveObjects } from "./InteractiveObjects";
 

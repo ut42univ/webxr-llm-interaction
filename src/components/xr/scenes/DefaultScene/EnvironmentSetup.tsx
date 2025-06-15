@@ -2,7 +2,7 @@
 
 import React, { Suspense } from "react";
 import { Environment, Sky } from "@react-three/drei";
-import { EnvironmentFallback } from "./EnvironmentFallback";
+import { EnvironmentFallback } from "../../common/EnvironmentFallback";
 
 export const EnvironmentSetup: React.FC = () => {
   return (
