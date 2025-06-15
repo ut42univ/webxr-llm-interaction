@@ -2,7 +2,7 @@
 
 import type { NextPage } from "next";
 import React from "react";
-import { Scene } from "@/components/xr/Scene";
+import { DefaultScene } from "@/components/xr/scenes/DefaultScene/DefaultScene";
 import { Button } from "@/components/ui/button";
 import { RectangleGoggles } from "lucide-react";
 import { store } from "@/lib/xr-store";
@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
         <RectangleGoggles />
         没入モードに移行
       </Button>
-      <Scene />
+      <DefaultScene />
     </div>
   );
 };
