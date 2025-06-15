@@ -12,20 +12,21 @@ export const VREntry: React.FC = () => {
 
   useEffect(() => {
     const checkVRSupport = async () => {
-      if (navigator.xr) {
-        try {
-          const supported = await navigator.xr.isSessionSupported(
-            "immersive-vr"
-          );
-          setIsVRCapable(supported);
-        } catch (e) {
-          console.error("Error checking VR support:", e);
-          setIsVRCapable(false);
-        }
-      } else {
+      if (!navigator.xr) {
         setIsVRCapable(false);
+        setCheckingVR(false);
+        return;
       }
-      setCheckingVR(false);
+
+      try {
+        const supported = await navigator.xr.isSessionSupported("immersive-vr");
+        setIsVRCapable(supported);
+      } catch (e) {
+        console.error("Error checking VR support:", e);
+        setIsVRCapable(false);
+      } finally {
+        setCheckingVR(false);
+      }
     };
     checkVRSupport();
   }, []);
