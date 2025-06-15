@@ -15,7 +15,6 @@ import { PhysicsWorld } from "@/components/xr/scenes/DefaultScene/PhysicsWorld";
 
 export const DefaultScene: React.FC = () => {
   const [position, setPosition] = useState(new Vector3());
-  position.set(0, 0, 0);
 
   return (
     <Canvas shadows className="!fixed !w-screen !h-screen">
