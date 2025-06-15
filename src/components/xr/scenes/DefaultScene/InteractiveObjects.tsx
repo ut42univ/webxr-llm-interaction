@@ -3,6 +3,7 @@
 import React from "react";
 import { Box } from "@/components/xr/common/Box";
 import { Sphere } from "@/components/xr/common/Sphere";
+import { Handle } from "@react-three/handle";
 
 export const InteractiveObjects: React.FC = () => {
   return (
@@ -14,12 +15,14 @@ export const InteractiveObjects: React.FC = () => {
         hoverColor="lightblue"
         castShadow
       />
-      <Sphere
-        position={[0, 1.0, 0]}
-        color="orange"
-        hoverColor="yellow"
-        castShadow
-      />
+      <Handle>
+        <Sphere
+          position={[0, 1.0, 5]}
+          color="orange"
+          hoverColor="yellow"
+          castShadow
+        />
+      </Handle>
     </>
   );
 };
