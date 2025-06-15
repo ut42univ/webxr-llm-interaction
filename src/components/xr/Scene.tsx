@@ -3,7 +3,7 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@/components/xr/Box";
-import { createXRStore, TeleportTarget, XR, XROrigin } from "@react-three/xr";
+import { TeleportTarget, XR, XROrigin } from "@react-three/xr";
 import {
   Environment,
   OrbitControls,
@@ -17,11 +17,7 @@ import { EnvironmentFallback } from "@/components/xr/EnvironmentFallback";
 import { Floor } from "@/components/xr/Floor";
 import { CuboidCollider, Physics, RigidBody } from "@react-three/rapier";
 import { Vector3 } from "three";
-
-export const store = createXRStore({
-  hand: { teleportPointer: true },
-  controller: { teleportPointer: true },
-});
+import { store } from "@/lib/xr-store";
 
 export const Scene: React.FC = () => {
   const [position, setPosition] = useState(new Vector3());
