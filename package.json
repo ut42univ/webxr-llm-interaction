@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@liveblocks/client": "^3.0.0",
+    "@liveblocks/react": "^3.0.0",
     "@pmndrs/assets": "^1.7.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-spring/three": "^10.0.1",
