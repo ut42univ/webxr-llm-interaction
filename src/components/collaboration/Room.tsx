@@ -15,7 +15,7 @@ export function Room({
   roomId: string;
 }) {
   const PUBLIC_API_KEY: string =
-    process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_API_KEY || "";
+    process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY || "";
 
   return (
     <LiveblocksProvider publicApiKey={PUBLIC_API_KEY}>
