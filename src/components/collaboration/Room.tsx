@@ -6,6 +6,7 @@ import {
   RoomProvider,
   ClientSideSuspense,
 } from "@liveblocks/react/suspense";
+import { LoadingFallback } from "@/components/collaboration/LoadingFallback";
 
 export function Room({
   children,
@@ -20,7 +21,7 @@ export function Room({
   return (
     <LiveblocksProvider publicApiKey={PUBLIC_API_KEY}>
       <RoomProvider id={roomId}>
-        <ClientSideSuspense fallback={<div>Loading…</div>}>
+        <ClientSideSuspense fallback={<LoadingFallback />}>
           {children}
         </ClientSideSuspense>
       </RoomProvider>
