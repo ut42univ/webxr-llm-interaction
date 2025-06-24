@@ -20,7 +20,10 @@ export function Room({
 
   return (
     <LiveblocksProvider publicApiKey={PUBLIC_API_KEY}>
-      <RoomProvider id={roomId}>
+      <RoomProvider
+        id={roomId}
+        initialPresence={{ username: "Anonymous", cursor: null }}
+      >
         <ClientSideSuspense fallback={<LoadingFallback />}>
           {children}
         </ClientSideSuspense>
