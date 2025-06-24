@@ -76,7 +76,7 @@ const XRHomePage = () => {
                     {experience.description}
                   </CardDescription>
                   <div className="flex justify-center">
-                    <Button className="w-full">体験開始 →</Button>
+                    <Button className="w-full">体験する →</Button>
                   </div>
                 </CardContent>
               </Card>

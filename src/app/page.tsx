@@ -77,7 +77,7 @@ export default function HomePage() {
                   </CardDescription>
                   <div className="flex justify-center">
                     <Button className="w-full group-hover:bg-primary/90 transition-colors duration-300">
-                      体験する →
+                      ページへ移動 →
                     </Button>
                   </div>
                 </CardContent>
