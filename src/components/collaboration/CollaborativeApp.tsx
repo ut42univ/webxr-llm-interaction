@@ -1,6 +1,6 @@
 "use client";
 
-import { Cursor } from "@/components/collaboration/Cursor";
+import { Cursor } from "@/components/ui/Cursor";
 import { Button } from "@/components/ui/button";
 import { useMyPresence, useOthers } from "@liveblocks/react/suspense";
 import { PointerEvent } from "react";
