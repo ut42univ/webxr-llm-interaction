@@ -1,10 +1,13 @@
 import { CollaborativeApp } from "@/components/collaboration/CollaborativeApp";
 import { Room } from "@/components/collaboration/Room";
+import { NextPage } from "next";
 
-export default function Page() {
+const LiveblocksDemoPage: NextPage = () => {
   return (
     <Room roomId="cursor-collaboration">
       <CollaborativeApp />
     </Room>
   );
-}
+};
+
+export default LiveblocksDemoPage;

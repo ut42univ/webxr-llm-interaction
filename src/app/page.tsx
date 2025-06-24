@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { NextPage } from "next";
 
 const demos = [
   {
@@ -44,7 +45,7 @@ const technologies = [
   "Liveblocks",
 ];
 
-export default function HomePage() {
+const HomePage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -107,4 +108,6 @@ export default function HomePage() {
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;

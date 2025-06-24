@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckCircle, Info } from "lucide-react";
+import { NextPage } from "next";
 
 const xrExperiences = [
   {
@@ -26,7 +27,7 @@ const xrExperiences = [
   },
 ];
 
-const XRHomePage = () => {
+const XRHomePage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
