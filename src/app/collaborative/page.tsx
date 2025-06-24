@@ -3,7 +3,7 @@ import { Room } from "@/components/collaboration/Room";
 
 export default function Page() {
   return (
-    <Room roomId="test-room">
+    <Room roomId="cursor-collaboration">
       <CollaborativeApp />
     </Room>
   );
