@@ -2,7 +2,6 @@
 
 import { Floor } from "@/components/xr/common/Floor";
 import { Lights } from "@/components/xr/common/Lights";
-import { Sphere } from "@/components/xr/common/Sphere";
 import { EnvironmentSetup } from "@/components/xr/scenes/MultiplayerScene/EnvironmentSetup";
 import { store } from "@/lib/xr-store";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
@@ -27,13 +26,6 @@ export const MultiplayerScene: React.FC = () => {
         <TeleportTarget onTeleport={setPosition}>
           <Floor size={[5, 5]} />
         </TeleportTarget>
-
-        <Sphere
-          position={[-2, 1, 0]}
-          color="orange"
-          hoverColor="yellow"
-          castShadow
-        />
       </XR>
     </Canvas>
   );
