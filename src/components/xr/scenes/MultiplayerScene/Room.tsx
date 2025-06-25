@@ -96,7 +96,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="house_Material009_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.house_Material009_0.geometry}
                   material={materials["Material.009"]}
@@ -110,7 +109,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="cabinet_Material015_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.cabinet_Material015_0.geometry}
                   material={materials["Material.015"]}
@@ -119,7 +117,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               <group name="window" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
                 <mesh
                   name="window_Material016_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.window_Material016_0.geometry}
                   material={materials["Material.016"]}
@@ -133,7 +130,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="table_Material5001_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.table_Material5001_0.geometry}
                   material={materials["Material5.001"]}
@@ -142,7 +138,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               <group name="floor" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
                 <mesh
                   name="floor_floor_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.floor_floor_0.geometry}
                   material={materials.floor}
@@ -156,7 +151,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="jar4_Material017_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.jar4_Material017_0.geometry}
                   material={materials["Material.017"]}
@@ -170,7 +164,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="jar3_Material002_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.jar3_Material002_0.geometry}
                   material={materials["Material.002"]}
@@ -184,7 +177,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="vase_grey001_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.vase_grey001_0.geometry}
                   material={materials["grey.001"]}
@@ -198,7 +190,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="faucet_Material006_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.faucet_Material006_0.geometry}
                   material={materials["Material.006"]}
@@ -212,7 +203,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="bowl_grey_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.bowl_grey_0.geometry}
                   material={materials.grey}
@@ -226,14 +216,12 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="painting_Material010_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.painting_Material010_0.geometry}
                   material={materials["Material.010"]}
                 />
                 <mesh
                   name="painting_Material011_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.painting_Material011_0.geometry}
                   material={materials["Material.011"]}
@@ -247,21 +235,18 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="candle_Material013_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.candle_Material013_0.geometry}
                   material={materials["Material.013"]}
                 />
                 <mesh
                   name="candle_Material008_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.candle_Material008_0.geometry}
                   material={materials["Material.008"]}
                 />
                 <mesh
                   name="candle_Material007_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.candle_Material007_0.geometry}
                   material={materials["Material.007"]}
@@ -275,14 +260,12 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="flower_leaf2_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.flower_leaf2_0.geometry}
                   material={materials.leaf2}
                 />
                 <mesh
                   name="flower_leaf1_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.flower_leaf1_0.geometry}
                   material={materials.leaf1}
@@ -296,21 +279,18 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="lighting_Material001_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.lighting_Material001_0.geometry}
                   material={materials["Material.001"]}
                 />
                 <mesh
                   name="lighting_Material003_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.lighting_Material003_0.geometry}
                   material={materials["Material.003"]}
                 />
                 <mesh
                   name="lighting_Material014_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.lighting_Material014_0.geometry}
                   material={materials["Material.014"]}
@@ -324,7 +304,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="IKEA_seat_wood__0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.IKEA_seat_wood__0.geometry}
                   material={materials.wood}
@@ -338,7 +317,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="carpet_Carpet__0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.carpet_Carpet__0.geometry}
                   material={materials.Carpet}
@@ -352,7 +330,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="chopping_board1_Material1_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.chopping_board1_Material1_0.geometry}
                   material={materials.Material1}
@@ -366,7 +343,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="chopping_board2_Material2_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.chopping_board2_Material2_0.geometry}
                   material={materials.Material2}
@@ -380,7 +356,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="jar1_Material3_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.jar1_Material3_0.geometry}
                   material={materials.Material3}
@@ -394,7 +369,6 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="jar2_Material4_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.jar2_Material4_0.geometry}
                   material={materials.Material4}
@@ -408,14 +382,12 @@ export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
               >
                 <mesh
                   name="seat_Leather_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.seat_Leather_0.geometry}
                   material={materials.Leather}
                 />
                 <mesh
                   name="seat_Material5_0"
-                  castShadow
                   receiveShadow
                   geometry={nodes.seat_Material5_0.geometry}
                   material={materials.Material5}
