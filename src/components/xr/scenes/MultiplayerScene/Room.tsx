@@ -7,7 +7,7 @@ Title: Dining room | Kichen baked
 */
 
 import * as THREE from "three";
-import React, { useRef } from "react";
+import React, { JSX } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -74,297 +74,359 @@ type GLTFResult = GLTF & {
   };
 };
 
-export const Room: React.FC = (props: React.ComponentProps<"group">) => {
+export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
   const { nodes, materials } = useGLTF(
-    "/dining-room.glb"
+    "/models/living-room.glb"
   ) as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
-      <group
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
-        userData={{ name: "RootNode" }}
-      >
-        <group
-          position={[388.469, 117.552, -211.434]}
-          rotation={[-Math.PI / 2, 0.148, 0]}
-          scale={[2.712, 31.279, 31.279]}
-          userData={{ name: "painting" }}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.painting_Material010_0.geometry}
-            material={materials["Material.010"]}
-            userData={{ name: "painting_Material.010_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.painting_Material011_0.geometry}
-            material={materials["Material.011"]}
-            userData={{ name: "painting_Material.011_0" }}
-          />
+      <group name="Sketchfab_Scene">
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+          <group
+            name="3ea9d54983ef41049c8c29b9d6d4440afbx"
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={0.01}
+          >
+            <group name="RootNode">
+              <group
+                name="house"
+                position={[0, 151.309, -0.282]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[396.176, 396.176, 150]}
+              >
+                <mesh
+                  name="house_Material009_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.house_Material009_0.geometry}
+                  material={materials["Material.009"]}
+                />
+              </group>
+              <group
+                name="cabinet"
+                position={[367.527, 300.186, 45.941]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[34.407, 249.171, 3.605]}
+              >
+                <mesh
+                  name="cabinet_Material015_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.cabinet_Material015_0.geometry}
+                  material={materials["Material.015"]}
+                />
+              </group>
+              <group name="window" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+                <mesh
+                  name="window_Material016_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.window_Material016_0.geometry}
+                  material={materials["Material.016"]}
+                />
+              </group>
+              <group
+                name="table"
+                position={[83.1, 65.739, 24.667]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[80.747, 80.747, 10.763]}
+              >
+                <mesh
+                  name="table_Material5001_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.table_Material5001_0.geometry}
+                  material={materials["Material5.001"]}
+                />
+              </group>
+              <group name="floor" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+                <mesh
+                  name="floor_floor_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.floor_floor_0.geometry}
+                  material={materials.floor}
+                />
+              </group>
+              <group
+                name="jar4"
+                position={[377.036, 94.34, 219.292]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={7.771}
+              >
+                <mesh
+                  name="jar4_Material017_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.jar4_Material017_0.geometry}
+                  material={materials["Material.017"]}
+                />
+              </group>
+              <group
+                name="jar3"
+                position={[383.419, 94.983, 239.01]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={8.337}
+              >
+                <mesh
+                  name="jar3_Material002_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.jar3_Material002_0.geometry}
+                  material={materials["Material.002"]}
+                />
+              </group>
+              <group
+                name="vase"
+                position={[85.258, 86.332, 64.115]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={8.337}
+              >
+                <mesh
+                  name="vase_grey001_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.vase_grey001_0.geometry}
+                  material={materials["grey.001"]}
+                />
+              </group>
+              <group
+                name="faucet"
+                position={[392.071, 95.046, 141.652]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[0.204, 0.204, 1.555]}
+              >
+                <mesh
+                  name="faucet_Material006_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.faucet_Material006_0.geometry}
+                  material={materials["Material.006"]}
+                />
+              </group>
+              <group
+                name="bowl"
+                position={[372.827, 99.081, 270.913]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[16.524, 16.524, 12.674]}
+              >
+                <mesh
+                  name="bowl_grey_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.bowl_grey_0.geometry}
+                  material={materials.grey}
+                />
+              </group>
+              <group
+                name="painting"
+                position={[388.469, 117.552, -211.434]}
+                rotation={[-Math.PI / 2, 0.148, 0]}
+                scale={[2.712, 31.279, 31.279]}
+              >
+                <mesh
+                  name="painting_Material010_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.painting_Material010_0.geometry}
+                  material={materials["Material.010"]}
+                />
+                <mesh
+                  name="painting_Material011_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.painting_Material011_0.geometry}
+                  material={materials["Material.011"]}
+                />
+              </group>
+              <group
+                name="candle"
+                position={[366.217, 115.97, -143.771]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={3.789}
+              >
+                <mesh
+                  name="candle_Material013_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.candle_Material013_0.geometry}
+                  material={materials["Material.013"]}
+                />
+                <mesh
+                  name="candle_Material008_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.candle_Material008_0.geometry}
+                  material={materials["Material.008"]}
+                />
+                <mesh
+                  name="candle_Material007_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.candle_Material007_0.geometry}
+                  material={materials["Material.007"]}
+                />
+              </group>
+              <group
+                name="flower"
+                position={[85.821, 88.279, 64.486]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={100}
+              >
+                <mesh
+                  name="flower_leaf2_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.flower_leaf2_0.geometry}
+                  material={materials.leaf2}
+                />
+                <mesh
+                  name="flower_leaf1_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.flower_leaf1_0.geometry}
+                  material={materials.leaf1}
+                />
+              </group>
+              <group
+                name="lighting"
+                position={[188.831, 243.457, -26.58]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[2.688, 2.688, 23.024]}
+              >
+                <mesh
+                  name="lighting_Material001_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.lighting_Material001_0.geometry}
+                  material={materials["Material.001"]}
+                />
+                <mesh
+                  name="lighting_Material003_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.lighting_Material003_0.geometry}
+                  material={materials["Material.003"]}
+                />
+                <mesh
+                  name="lighting_Material014_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.lighting_Material014_0.geometry}
+                  material={materials["Material.014"]}
+                />
+              </group>
+              <group
+                name="IKEA_seat"
+                position={[363.595, 31.995, -331.439]}
+                rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+                scale={[17.536, 15.514, 15.514]}
+              >
+                <mesh
+                  name="IKEA_seat_wood__0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.IKEA_seat_wood__0.geometry}
+                  material={materials.wood}
+                />
+              </group>
+              <group
+                name="carpet"
+                position={[81.578, 2.411, 26.536]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[190.768, 245.015, 0.524]}
+              >
+                <mesh
+                  name="carpet_Carpet__0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.carpet_Carpet__0.geometry}
+                  material={materials.Carpet}
+                />
+              </group>
+              <group
+                name="chopping_board1"
+                position={[388.318, 97.913, 187.245]}
+                rotation={[-1.593, -1.28, -0.023]}
+                scale={[1.332, 1.546, 1.332]}
+              >
+                <mesh
+                  name="chopping_board1_Material1_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.chopping_board1_Material1_0.geometry}
+                  material={materials.Material1}
+                />
+              </group>
+              <group
+                name="chopping_board2"
+                position={[391.595, 98.773, 194.446]}
+                rotation={[-1.6, -1.347, -0.03]}
+                scale={[1.399, 1.586, 1.399]}
+              >
+                <mesh
+                  name="chopping_board2_Material2_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.chopping_board2_Material2_0.geometry}
+                  material={materials.Material2}
+                />
+              </group>
+              <group
+                name="jar1"
+                position={[375.22, 92.792, -108.769]}
+                rotation={[-Math.PI / 2, 0, -1.875]}
+                scale={0.898}
+              >
+                <mesh
+                  name="jar1_Material3_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.jar1_Material3_0.geometry}
+                  material={materials.Material3}
+                />
+              </group>
+              <group
+                name="jar2"
+                position={[372.586, 97.235, -121.78]}
+                rotation={[-Math.PI / 2, 0, -1.247]}
+                scale={0.824}
+              >
+                <mesh
+                  name="jar2_Material4_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.jar2_Material4_0.geometry}
+                  material={materials.Material4}
+                />
+              </group>
+              <group
+                name="seat"
+                position={[81.651, 59.793, -127.726]}
+                rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+                scale={[25.257, 25.257, 2.667]}
+              >
+                <mesh
+                  name="seat_Leather_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.seat_Leather_0.geometry}
+                  material={materials.Leather}
+                />
+                <mesh
+                  name="seat_Material5_0"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.seat_Material5_0.geometry}
+                  material={materials.Material5}
+                />
+              </group>
+            </group>
+          </group>
         </group>
-        <group
-          position={[366.217, 115.97, -143.771]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={3.789}
-          userData={{ name: "candle" }}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.candle_Material013_0.geometry}
-            material={materials["Material.013"]}
-            userData={{ name: "candle_Material.013_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.candle_Material008_0.geometry}
-            material={materials["Material.008"]}
-            userData={{ name: "candle_Material.008_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.candle_Material007_0.geometry}
-            material={materials["Material.007"]}
-            userData={{ name: "candle_Material.007_0" }}
-          />
-        </group>
-        <group
-          position={[85.821, 88.279, 64.486]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-          userData={{ name: "flower" }}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.flower_leaf2_0.geometry}
-            material={materials.leaf2}
-            userData={{ name: "flower_leaf2_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.flower_leaf1_0.geometry}
-            material={materials.leaf1}
-            userData={{ name: "flower_leaf1_0" }}
-          />
-        </group>
-        <group
-          position={[188.831, 243.457, -26.58]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[2.688, 2.688, 23.024]}
-          userData={{ name: "lighting" }}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.lighting_Material001_0.geometry}
-            material={materials["Material.001"]}
-            userData={{ name: "lighting_Material.001_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.lighting_Material003_0.geometry}
-            material={materials["Material.003"]}
-            userData={{ name: "lighting_Material.003_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.lighting_Material014_0.geometry}
-            material={materials["Material.014"]}
-            userData={{ name: "lighting_Material.014_0" }}
-          />
-        </group>
-        <group
-          position={[81.651, 59.793, -127.726]}
-          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
-          scale={[25.257, 25.257, 2.667]}
-          userData={{ name: "seat" }}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.seat_Leather_0.geometry}
-            material={materials.Leather}
-            userData={{ name: "seat_Leather_0" }}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.seat_Material5_0.geometry}
-            material={materials.Material5}
-            userData={{ name: "seat_Material5_0" }}
-          />
-        </group>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.house_Material009_0.geometry}
-          material={materials["Material.009"]}
-          position={[0, 151.309, -0.282]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[396.176, 396.176, 150]}
-          userData={{ name: "house_Material.009_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.cabinet_Material015_0.geometry}
-          material={materials["Material.015"]}
-          position={[367.527, 300.186, 45.941]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[34.407, 249.171, 3.605]}
-          userData={{ name: "cabinet_Material.015_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.window_Material016_0.geometry}
-          material={materials["Material.016"]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-          userData={{ name: "window_Material.016_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.table_Material5001_0.geometry}
-          material={materials["Material5.001"]}
-          position={[83.1, 65.739, 24.667]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[80.747, 80.747, 10.763]}
-          userData={{ name: "table_Material5.001_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.floor_floor_0.geometry}
-          material={materials.floor}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-          userData={{ name: "floor_floor_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.jar4_Material017_0.geometry}
-          material={materials["Material.017"]}
-          position={[377.036, 94.34, 219.292]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={7.771}
-          userData={{ name: "jar4_Material.017_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.jar3_Material002_0.geometry}
-          material={materials["Material.002"]}
-          position={[383.419, 94.983, 239.01]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={8.337}
-          userData={{ name: "jar3_Material.002_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.vase_grey001_0.geometry}
-          material={materials["grey.001"]}
-          position={[85.258, 86.332, 64.115]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={8.337}
-          userData={{ name: "vase_grey.001_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.faucet_Material006_0.geometry}
-          material={materials["Material.006"]}
-          position={[392.071, 95.046, 141.652]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[0.204, 0.204, 1.555]}
-          userData={{ name: "faucet_Material.006_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.bowl_grey_0.geometry}
-          material={materials.grey}
-          position={[372.827, 99.081, 270.913]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[16.524, 16.524, 12.674]}
-          userData={{ name: "bowl_grey_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.IKEA_seat_wood__0.geometry}
-          material={materials.wood}
-          position={[363.595, 31.995, -331.439]}
-          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
-          scale={[17.536, 15.514, 15.514]}
-          userData={{ name: "IKEA seat_wood _0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.carpet_Carpet__0.geometry}
-          material={materials.Carpet}
-          position={[81.578, 2.411, 26.536]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[190.768, 245.015, 0.524]}
-          userData={{ name: "carpet_Carpet _0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.chopping_board1_Material1_0.geometry}
-          material={materials.Material1}
-          position={[388.318, 97.913, 187.245]}
-          rotation={[-1.593, -1.28, -0.023]}
-          scale={[1.332, 1.546, 1.332]}
-          userData={{ name: "chopping board1_Material1_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.chopping_board2_Material2_0.geometry}
-          material={materials.Material2}
-          position={[391.595, 98.773, 194.446]}
-          rotation={[-1.6, -1.347, -0.03]}
-          scale={[1.399, 1.586, 1.399]}
-          userData={{ name: "chopping board2_Material2_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.jar1_Material3_0.geometry}
-          material={materials.Material3}
-          position={[375.22, 92.792, -108.769]}
-          rotation={[-Math.PI / 2, 0, -1.875]}
-          scale={0.898}
-          userData={{ name: "jar1_Material3_0" }}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.jar2_Material4_0.geometry}
-          material={materials.Material4}
-          position={[372.586, 97.235, -121.78]}
-          rotation={[-Math.PI / 2, 0, -1.247]}
-          scale={0.824}
-          userData={{ name: "jar2_Material4_0" }}
-        />
       </group>
     </group>
   );
 };
 
-useGLTF.preload("/dining-room.glb");
+useGLTF.preload("/models/living-room.glb");
