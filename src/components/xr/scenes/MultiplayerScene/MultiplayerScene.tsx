@@ -2,7 +2,8 @@
 
 import { Floor } from "@/components/xr/common/Floor";
 import { Lights } from "@/components/xr/common/Lights";
-import { Room } from "@/components/xr/scenes/MultiplayerScene/Room";
+import { Sphere } from "@/components/xr/common/Sphere";
+import { EnvironmentSetup } from "@/components/xr/scenes/MultiplayerScene/EnvironmentSetup";
 import { store } from "@/lib/xr-store";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -21,19 +22,10 @@ export const MultiplayerScene: React.FC = () => {
         <OrbitControls />
 
         <Lights />
-
-        <Sky sunPosition={[100, 20, 100]} />
-        <Room />
+        <EnvironmentSetup />
 
         <TeleportTarget onTeleport={setPosition}>
-          <mesh
-            receiveShadow
-            rotation={[-Math.PI / 2, 0, 0]}
-            position={[0, 0, 0]}
-          >
-            <planeGeometry args={[100, 100]} />
-            <shadowMaterial transparent opacity={0.4} />
-          </mesh>
+          <Floor size={[5, 5]} />
         </TeleportTarget>
       </XR>
     </Canvas>
