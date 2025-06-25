@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Vector3 } from "three";
 
 export const MultiplayerScene: React.FC = () => {
-  const [position, setPosition] = useState(new Vector3());
+  const [position, setPosition] = useState(new Vector3(-2, 0, 0));
   return (
     <Canvas shadows className="!fixed !w-screen !h-screen">
       <XR store={store}>
