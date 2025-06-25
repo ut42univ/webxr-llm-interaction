@@ -1,10 +1,10 @@
 "use client";
 
-import { Camera } from "@/components/xr/common/Camera";
+import { Floor } from "@/components/xr/common/Floor";
 import { Lights } from "@/components/xr/common/Lights";
 import { Room } from "@/components/xr/scenes/MultiplayerScene/Room";
 import { store } from "@/lib/xr-store";
-import { Sky, Stats } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { TeleportTarget, XR, XROrigin } from "@react-three/xr";
 import { useState } from "react";
@@ -17,9 +17,9 @@ export const MultiplayerScene: React.FC = () => {
       <XR store={store}>
         <XROrigin position={position} />
 
-        <Stats />
+        <PerspectiveCamera makeDefault position={[-5, 5, 5]} fov={45} />
+        <OrbitControls />
 
-        <Camera />
         <Lights />
 
         <Sky sunPosition={[100, 20, 100]} />
