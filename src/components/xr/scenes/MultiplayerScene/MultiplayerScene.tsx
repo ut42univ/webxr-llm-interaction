@@ -27,6 +27,13 @@ export const MultiplayerScene: React.FC = () => {
         <TeleportTarget onTeleport={setPosition}>
           <Floor size={[5, 5]} />
         </TeleportTarget>
+
+        <Sphere
+          position={[-2, 1, 0]}
+          color="orange"
+          hoverColor="yellow"
+          castShadow
+        />
       </XR>
     </Canvas>
   );
