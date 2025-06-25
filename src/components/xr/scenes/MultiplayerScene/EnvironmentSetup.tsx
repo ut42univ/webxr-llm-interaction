@@ -3,7 +3,7 @@
 import React, { Suspense } from "react";
 import { Sky } from "@react-three/drei";
 import { EnvironmentFallback } from "@/components/xr/common/EnvironmentFallback";
-import { LivingRoom } from "@/components/xr/scenes/MultiplayerScene/Room";
+import { Stage } from "@/components/xr/scenes/MultiplayerScene/Stage";
 
 export const EnvironmentSetup: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const EnvironmentSetup: React.FC = () => {
       <Sky />
       <ambientLight />
       <Suspense fallback={<EnvironmentFallback />}>
-        <LivingRoom />
+        <Stage />
       </Suspense>
     </>
   );

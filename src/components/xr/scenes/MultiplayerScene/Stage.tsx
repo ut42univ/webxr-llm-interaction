@@ -74,7 +74,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export const LivingRoom: React.FC = (props: JSX.IntrinsicElements["group"]) => {
+export const Stage: React.FC = (props: JSX.IntrinsicElements["group"]) => {
   const { nodes, materials } = useGLTF(
     "/models/living-room.glb"
   ) as unknown as GLTFResult;
