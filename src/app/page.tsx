@@ -18,13 +18,6 @@ const demos = [
       "メインコンテンツです。WebXRを使用して、VRヘッドセットを装着して、仮想空間を探索できます。",
   },
   {
-    title: "共同編集スペース",
-    href: "/collaborative",
-    icon: "👥",
-    description:
-      "リアルタイムで複数のユーザーが協力して作業できる共同編集機能をテストしています。",
-  },
-  {
     title: "Supabaseテスト",
     href: "/database",
     icon: "📃",
@@ -42,7 +35,6 @@ const technologies = [
   "shadcn/ui",
   "WebXR",
   "Supabase",
-  "Liveblocks",
 ];
 
 const HomePage: NextPage = () => {
